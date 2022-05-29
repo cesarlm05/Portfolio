@@ -74,11 +74,10 @@
 
 .style-switcher .colors span {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     margin: 0 5px;
     border-radius: 50%;
-    border: 2px solid var(--skin-color);
 }
 
 .style-switcher .color {
