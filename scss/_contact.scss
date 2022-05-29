@@ -1,0 +1,104 @@
+.contact .container {
+  padding-bottom: 40px;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.contact-title {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--skin-color);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contact-sub-title {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--text-black-900);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.contact .contact-info-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact .contact-info-item .contact-info-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 auto 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact .contact-info-item .contact-info-icon .fa {
+  font-size: 30px;
+  line-height: 60px;
+  color: var(--skin-color);
+}
+
+.contact .contact-info-item .contact-info-text {
+  color: var(--text-black-900);
+  text-transform: capitalize;
+}
+
+.contact .contact-info-item .contact-info-text p {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 25px;
+}
+
+/* Form */
+.contact .contact-form {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.contact .contact-form .col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.contact .contact-form .col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.contact .contact-form .form-item {
+  margin-bottom: 30px;
+}
+
+.contact .contact-form .form-item .form-control {
+  width: 100%;
+  height: 50px;
+  padding: 10px 25px;
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 15px;
+  margin: 5px;
+  font-size: 16px;
+  color: var(--text-black-100);
+  transition: all 0.3s ease;
+}
+
+.contact .contact-form .form-item .form-control:focus {
+  border: 1px solid var(--skin-color);
+  box-shadow: 0 0 10px var(--bg-black-10);
+  transition: all 0.3s ease;
+}
+
+.contact .contact-form .form-item textarea.form-control {
+  height: 140px;
+}
+
+.contact .contact-form .btn {
+  height: 50px;
+  padding: 0 50px;
+}

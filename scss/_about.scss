@@ -1,0 +1,155 @@
+.about .about-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+  .about-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+    h3 {
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 15px;
+      color: var(--text-black-900);
+      span {
+        color: var(--skin-color);
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 25px;
+      color: var(--text-black-300);
+    }
+  }
+  h3.title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+  }
+}
+.about .about-content .personal-info {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-top: 40px;
+  .info-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-black-900);
+    border-bottom: 1px solid var(--text-black-100);
+    span {
+      font-weight: 400;
+      color: var(--text-black-300);
+      margin-left: 4px;
+      display: inline-block;
+    }
+  }
+  .buttons {
+    margin-top: 40px;
+    .btn {
+      margin-top: 10px;
+    }
+  }
+}
+.about .about-content .skills {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-top: 40px;
+  .skills-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    h5 {
+      line-height: 40px;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--text-black-900);
+      text-transform: capitalize;
+    }
+  }
+}
+
+.about .about-content .skills .skills-item {
+  margin-top: 25px;
+  .progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--text-black-100);
+    width: 100%;
+    position: relative;
+    .progress-bar {
+      height: 10px;
+      border-radius: 5px;
+      background-color: var(--skin-color);
+    }
+  }
+  .skill-percent {
+    position: absolute;
+    right: 0;
+    color: var(--text-black-900);
+    top: -40px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
+.about .about-content .education,
+.about .about-content .experience {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-top: 30px;
+}
+.about .about-content .timeline-box {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.about .about-content .timeline {
+  padding: 20px 10px;
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid var(--skin-color);
+  .timeline-item {
+    position: relative;
+    padding-left: 25px;
+    padding-bottom: 30px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+.about .about-content .timeline .timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: var(--text-black-900);
+  top: 0;
+  left: 5px;
+}
+
+.about .about-content .timeline .timeline-item .circle-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--skin-color);
+}
+.about .about-content .timeline .timeline-item .timeline-date {
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 12px;
+  color: var(--text-black-100);
+  .fa {
+    margin-right: 5px;
+  }
+}
+.about .about-content .timeline .timeline-item .timeline-title {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: var(--text-black-900);
+  margin-bottom: 10px;
+}

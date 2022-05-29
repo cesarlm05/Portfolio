@@ -1,0 +1,74 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  color: var(--text-black-900);
+  .home-info {
+    flex: 0 0 70%;
+    max-width: 70%;
+    p {
+      margin-bottom: 70px;
+      font-size: 20px;
+      color: var(--text-black-700);
+    }
+  }
+}
+h3.hello {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  margin: 95px 0;
+  .name {
+    color: var(--skin-color);
+    font-family: "Clicker Script", cursive;
+    font-size: 28px;
+    font-weight: 800;
+  }
+}
+h3.my-profission {
+  font-size: 28px;
+  margin: 15px 0;
+  .typing {
+    color: var(--skin-color);
+    font-size: 30px;
+    margin: 15px 0;
+  }
+}
+.typing {
+  color: var(--skin-color);
+}
+.home .home-img {
+  flex: 0 0 30%;
+  max-width: 30%;
+  height: 50%;
+  text-align: center;
+  position: relative;
+  margin-top: 150px;
+  img {
+    height: 200px;
+    border: 3px solid var(--skin-color);
+    border-radius: 50%;
+  }
+}
+.home-img::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-bottom: 5px solid var(--skin-color);
+  border-right: 5px solid var(--skin-color);
+  border-radius: 5px;
+  right: 20px;
+  bottom: -20px;
+}
+.home-img::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-top: 5px solid var(--skin-color);
+  border-left: 5px solid var(--skin-color);
+  border-radius: 5px;
+  left: 20px;
+  top: -20px;
+}

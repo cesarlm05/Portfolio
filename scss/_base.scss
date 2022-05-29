@@ -1,0 +1,63 @@
+// Imports
+@charset "UTF-8";
+// Fuentes
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("../css/skins/theme.css");
+// Variables globales
+:root {
+  --bg-black-900: #1a1a1a;
+  --bg-black-100: #2b2b2b;
+  --bg-black-50: #3d3d3d;
+  --bg-black-10: #4f4f4f;
+  --text-black-900: #fff;
+  --text-black-700: #fefefe;
+  --text-black-500: #fafafa;
+  --text-black-300: #eaeaea;
+  --text-black-100: #d5d5d5;
+}
+
+body.dark {
+  --bg-black-900: #fff;
+  --bg-black-100: #f3f3f3;
+  --bg-black-50: #ececec;
+  --bg-black-10: #eaeaea;
+  --text-black-900: #1a1a1a;
+  --text-black-700: #2b2b2b;
+  --text-black-500: #3d3d3d;
+  --text-black-300: #4c4c4c;
+  --text-black-100: #4f4f4feb;
+}
+
+$color-theme: rgb(0, 255, 0);
+$color-theme1: rgb(255, 0, 0);
+$color-theme2: rgb(0, 0, 255);
+$color-theme3: rgb(255, 255, 0);
+$color-theme4: rgb(0, 255, 255);
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+// Mixins
+// Class
