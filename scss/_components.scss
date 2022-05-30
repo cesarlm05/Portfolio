@@ -6,31 +6,31 @@
 .title-section {
   flex: 0 0 100%;
   max-width: 100%;
-}
-.title-section h2 {
-  font-size: 30px;
-  font-weight: 500;
-  text-transform: capitalize;
-  letter-spacing: 5px;
-  margin: 95px 0;
-  position: relative;
-}
-.title-section h2::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 4px;
-  border-bottom: 5px solid var(--skin-color);
-  top: 100%;
-  left: 0;
-}
-.title-section h2::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 4px;
-  border-bottom: 5px solid var(--skin-color);
-  top: 100%;
-  left: 0;
-  margin-top: 8px;
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    margin: 95px 0;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 4px;
+      border-bottom: 5px solid var(--skin-color);
+      top: 100%;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 4px;
+      border-bottom: 5px solid var(--skin-color);
+      top: 100%;
+      left: 0;
+      margin-top: 8px;
+    }
+  }
 }
