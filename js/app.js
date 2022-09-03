@@ -65,7 +65,7 @@ const buying = (e) => {
 
 function message() {
   Swal.fire({
-    title: `Bienvevidos a VERSATILE`,
+    title: `ANTES DE COMPRAR`,
     html: `<p>
           <div">
             DEBIDO A LA FALTA DE MERCADERÍA Y A LAS CONSTANTES VARIACIONES EN NUESTRO STOCK.
