@@ -8,7 +8,7 @@
 
 let menuToggle = document.querySelector(".menuToggle");
 
-// Alumno César L. Medina
+// César L. Medina
 
 const cards = document.getElementById("cards"),
   items = document.getElementById("items"),
@@ -68,21 +68,24 @@ function message() {
     title: `ANTES DE COMPRAR`,
     html: `<p>
           <div">
-            DEBIDO A LA FALTA DE MERCADERÍA Y A LAS CONSTANTES VARIACIONES EN NUESTRO STOCK.
+            DEBIDO A LAS CONSTANTES VARIACIONES EN NUESTRO STOCK.
             <br>
             PARA COMPRAR DESDE LA COMODIDAD DE TU CASA TENES QUE COMUNICARTE CON NOSOTROS
-            VIA WHATSAPP AL 
+            POR WHATSAPP
             <br>
-            <img src="../assets/img/ico-whatsapp.png"> <a href="https://walink.co/04d744" class="color_blanco" target="_blank"> +54 11 3423-4323</a><br>
+            <img src="../assets/img/ico-whatsapp.png"> <a href="https://walink.co/4ee048" target="_blank"> +54 11 2252-4460</a>
             <br>
-            AHÍ TE RESPONDEREMOS EN NUESTRO HORARIO DE ATENCIÓN, DE LUNES A VIERNES DE 8 A 17
             <br>
-            Los precios que figuran en página son contado efectivo, transferencia bancaria y/o tarjeta de débito. Los precios de página pueden variar sin previo aviso, antes de comprar consulte stock, las fotos son a modo ilustrativo, la descripción de los productos puede variar sin previo aviso.
+            AHÍ TE RESPONDEREMOS LO ANTES POSIBLE.
+            <br>
+            <br>
+            Los precios que figuran en página son contado efectivo, transferencia bancaria y/o tarjeta de débito.
+            Los precios de página pueden variar sin previo aviso, antes de comprar consulte stock, las fotos son a modo ilustrativo, la descripción de los productos puede variar sin previo aviso.
           </div>
         </p>`,
     icon: `info`,
     background: `#fff`,
-    timer: `15000`,
+    timer: `25000`,
     allowOutsideClick: false,
     allowEscapeKey: false,
     allowEnterKey: false,
