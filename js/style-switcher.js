@@ -1,23 +1,17 @@
-/* Toggler Styles Switcher */
-// @ts-ignore
 const toggler = document.querySelector(".style-switcher-toggler");
 toggler.addEventListener("click", () => {
-  // @ts-ignore
   const switcher = document.querySelector(".style-switcher");
   switcher.classList.toggle("open");
-  // hide style swicher on Timeout
   if (switcher.classList.contains("open")) {
     setTimeout(() => {
       switcher.classList.remove("open");
     }, 5000);
   }
 });
-/* TThemes colors */
-// @ts-ignore
+
 const alternateStyles = document.querySelectorAll(".alternate-style");
-// @ts-ignore
+
 function setActiveStyle(color) {
-  // @ts-ignore
   alternateStyles.forEach((style) => {
     if (style.getAttribute("title") === color) {
       style.removeAttribute("disabled");
@@ -25,23 +19,34 @@ function setActiveStyle(color) {
       style.setAttribute("disabled", "true");
     }
   });
+  localStorage.setItem("theme", color);
 }
-/* TThemes light or night mode */
-// @ts-ignore
+
 const lightMode = document.querySelector(".light-mode");
-// @ts-ignore
+
 lightMode.addEventListener("click", () => {
-  // @ts-ignore
-  lightMode.querySelector("i").classList.toggle("fa-sun");
-  lightMode.querySelector("i").classList.toggle("fa-moon");
-  // @ts-ignore
+  const icon = lightMode.querySelector("i");
+  icon.classList.toggle("fa-sun");
+  icon.classList.toggle("fa-moon");
   document.body.classList.toggle("dark");
+  localStorage.setItem("darkMode", document.body.classList.contains("dark") ? "1" : "0");
 });
+
 window.addEventListener("load", () => {
-  // @ts-ignore
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    setActiveStyle(savedTheme);
+  }
+
+  const darkMode = localStorage.getItem("darkMode");
+  if (darkMode === "1") {
+    document.body.classList.add("dark");
+  }
+
+  const icon = lightMode.querySelector("i");
   if (document.body.classList.contains("dark")) {
-    lightMode.querySelector("i").classList.add("fa-moon");
+    icon.classList.add("fa-moon");
   } else {
-    lightMode.querySelector("i").classList.add("fa-sun");
+    icon.classList.add("fa-sun");
   }
 });

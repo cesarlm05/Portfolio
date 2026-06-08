@@ -1,110 +1,102 @@
-/* typing animation */
-// @ts-ignore
 var typed = new Typed(".typing", {
   strings: ["", "Group Arch.", "Web www.grouparch.com.ar"],
   typeSpeed: 80,
   backSpeed: 80,
   loop: true,
 });
-/* Aside */
-// @ts-ignore
+
 const nav = document.querySelector(".nav"),
-  // @ts-ignore
   navList = nav.querySelectorAll("li"),
-  // @ts-ignore
   totalNavList = navList.length,
-  // @ts-ignore
   allSection = document.querySelectorAll(".section"),
-  // @ts-ignore
   totalSections = allSection.length;
+
 for (let i = 0; i < totalNavList; i++) {
   const a = navList[i].querySelector("a");
   a.addEventListener("click", () => {
-    // @ts-ignore
-    removeBackSection();
-    for (let j = 0; j < totalNavList; j++) {
-      let pointer = navList[j].querySelector("a").classList.contains("active");
-      if (pointer) {
-        addBackSection(j);
-        //console.log("back-section"+navList[j].querySelector("a"));
-        //allSection[j].classList.add("back-section");
-      }
-      navList[j].querySelector("a").classList.remove("active");
-    }
-    //console.log(a);
-    a.classList.add("active");
-    showSection(a);
-    // @ts-ignore
+    navigateTo(a);
     if (window.innerWidth < 1200) {
       asideSectionBtnToggler();
     }
   });
 }
-// @ts-ignore
-const showSection = (section) => {
-  // @ts-ignore
+
+const navigateTo = (anchor) => {
+  removeBackSection();
+  for (let j = 0; j < totalNavList; j++) {
+    const link = navList[j].querySelector("a");
+    if (link.classList.contains("active")) {
+      addBackSection(j);
+    }
+    link.classList.remove("active");
+  }
+  anchor.classList.add("active");
+  showSection(anchor);
+};
+
+const showSection = (anchor) => {
   for (let i = 0; i < totalSections; i++) {
     allSection[i].classList.remove("active");
   }
-  const target = section.getAttribute("href").split("#")[1];
-  //console.log(target);
-  // @ts-ignore
-  document.querySelector("#" + target).classList.add("active");
+  const target = anchor.getAttribute("href").split("#")[1];
+  const el = document.querySelector("#" + target);
+  if (el) el.classList.add("active");
 };
-/* Fuciones */
+
 function removeBackSection() {
   for (let i = 0; i < totalSections; i++) {
     allSection[i].classList.remove("back-section");
   }
 }
-// @ts-ignore
+
 function addBackSection(num) {
   const back = allSection[num];
-  back.classList.add("back-section");
+  if (back) back.classList.add("back-section");
 }
-// @ts-ignore
-function updateNav(section) {
-  // @ts-ignore
-  //console.log(section.getAttribute("href").split("#")[1]);
+
+function updateNavActive(hash) {
   for (let i = 0; i < totalNavList; i++) {
-    // @ts-ignore
-    navList[i].querySelector("a").classList.remove("active");
-    const target = section.getAttribute("href").split("#")[1];
-    // @ts-ignore
-    const position = navList[i]
-      .querySelector("a")
-      .getAttribute("href")
-      .split("#")[1];
-    // @ts-ignore
-    if (target === position) {
-      navList[i].querySelector("a").classList.add("active");
+    const link = navList[i].querySelector("a");
+    link.classList.remove("active");
+    if (link.getAttribute("href") === hash) {
+      link.classList.add("active");
     }
   }
 }
-/* Contact .hire-me Event Click */
-// @ts-ignore
+
+const loadSectionFromHash = () => {
+  const hash = window.location.hash || "#home";
+  updateNavActive(hash);
+  const target = hash.replace("#", "");
+  for (let i = 0; i < totalSections; i++) {
+    allSection[i].classList.remove("active", "back-section");
+  }
+  const el = document.querySelector("#" + target);
+  if (el) {
+    el.classList.add("active");
+  } else {
+    const home = document.querySelector("#home");
+    if (home) home.classList.add("active");
+    updateNavActive("#home");
+  }
+};
+
+window.addEventListener("hashchange", loadSectionFromHash);
+window.addEventListener("load", loadSectionFromHash);
+
 const hireMe = document.querySelector(".hire-me");
-// @ts-ignore
 hireMe.addEventListener("click", () => {
-  const sectionIndex = hireMe.getAttribute("data-section-index");
-  console.log(sectionIndex);
-  // @ts-ignore
-  //console.log(hireMe);
-  showSection(hireMe);
-  updateNav(hireMe);
-  removeBackSection();
-  addBackSection(sectionIndex);
+  const contactAnchor = document.querySelector('.nav a[href="#contact"]');
+  if (contactAnchor) navigateTo(contactAnchor);
 });
-/* Nav Toggler List */
-// @ts-ignore
+
 const btnToggler = document.querySelector(".nav-toggler"),
-  // @ts-ignore
   aside = document.querySelector(".aside");
-// @ts-ignore
+
 btnToggler.addEventListener("click", () => {
   asideSectionBtnToggler();
 });
-// @ts-ignore
+
 function asideSectionBtnToggler() {
   aside.classList.toggle("open");
   btnToggler.classList.toggle("open");
