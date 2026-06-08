@@ -9,7 +9,7 @@ toggler.addEventListener("click", () => {
   if (switcher.classList.contains("open")) {
     setTimeout(() => {
       switcher.classList.remove("open");
-    }, 3000);
+    }, 5000);
   }
 });
 /* TThemes colors */
