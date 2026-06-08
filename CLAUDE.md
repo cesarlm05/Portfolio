@@ -9,6 +9,9 @@ Static portfolio/e-commerce website for **Group Arch**, a technology products re
 ## Commands
 
 ```bash
+# Install dependencies (uses Dart Sass — run with --ignore-scripts on Node 22+)
+npm install --ignore-scripts
+
 # Compile SCSS to CSS (one-time)
 npm run build-css
 

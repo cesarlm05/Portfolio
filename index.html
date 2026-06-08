@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Nos enfocamos en elegir cuidadosamente nuestro catalogo de productos para traerte lo merjor, siempre pensando en tener los precios mas competitivos del mercado, y con la mas alta calidad que buscás!">
-    <meta name="author" content="Cesar L. Medina">
-    <link rel="shortcut icon" href="#">
+        content="Group Arch - Tecnología al mejor precio. Televisores, celulares, notebooks, tabletas y más. Enviamos a toda Argentina.">
+    <meta name="keywords" content="tecnología, celulares, notebooks, televisores, electrodomésticos, Argentina">
+    <meta name="author" content="Group Arch">
+    <meta property="og:title" content="Group Arch - Tecnología al mejor precio">
+    <meta property="og:description" content="Televisores, celulares, notebooks y más. Los mejores precios del mercado.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.grouparch.com.ar">
+    <link rel="shortcut icon" href="assets/img/profile.png" type="image/png">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- Themes-->
@@ -18,60 +23,91 @@
     <link rel="stylesheet" href="css/skins/theme3.css" class="alternate-style" title="theme3" disabled />
     <link rel="stylesheet" href="css/skins/theme4.css" class="alternate-style" title="theme4" disabled />
     <!-- Themes-->
-    <title>GROUP ARCH</title>
+    <title>Group Arch - Tecnología al mejor precio</title>
 </head>
 
 <body>
     <!-- Main Container Start -->
     <div class="main-container">
-        <!--- Start Header Aside -->
+        <!-- Start Header Aside -->
         <div class="aside" id="aside">
             <div class="logo">
                 <a href="#home" rel="noopener noreferrer">
                     <span>G. A. </span>
                 </a>
             </div>
-            <div class="nav-toggler">
+            <div class="nav-toggler" aria-label="Abrir menú" role="button">
                 <span></span>
             </div>
-            <ul class="nav">
-                <li><a href="#home" class="active"> <i class="fa fa-home"></i> Inicio</a></li>
-                <li><a href="#about"> <i class="fa fa-user"></i> Nosotros</a></li>
-                <li><a href="#service"> <i class="fa fa-globe"></i> Servicios</a></li>
-                <li><a href="#portfolio"> <i class="fa fa-list"></i> Productos</a></li>
-                <li><a href="#contact"> <i class="fa fa-phone"></i> Contacto</a></li>
+            <ul class="nav" role="navigation" aria-label="Navegación principal">
+                <li><a href="#home" class="active"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a></li>
+                <li><a href="#about"><i class="fa fa-user" aria-hidden="true"></i> Nosotros</a></li>
+                <li><a href="#service"><i class="fa fa-globe" aria-hidden="true"></i> Servicios</a></li>
+                <li>
+                    <a href="#portfolio"><i class="fa fa-list" aria-hidden="true"></i> Productos</a>
+                </li>
+                <li><a href="#contact"><i class="fa fa-phone" aria-hidden="true"></i> Contacto</a></li>
             </ul>
+            <!-- Cart button in nav -->
+            <button class="cart-nav-btn" id="cart-icon-btn" aria-label="Ver carrito">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="cart-badge" id="cart-badge" style="display:none;">0</span>
+            </button>
         </div>
-        <!--- End Header Aside -->
-        <!--- Start Main Content -->
+        <!-- End Header Aside -->
+
+        <!-- Cart Panel -->
+        <div class="cart-panel" id="cart-panel" role="dialog" aria-label="Carrito de compras">
+            <div class="cart-panel-header">
+                <h3><i class="fa fa-shopping-cart"></i> Mi Carrito <span id="cart-count"></span></h3>
+                <button id="close-cart" aria-label="Cerrar carrito"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <p class="cart-empty">Tu carrito está vacío.</p>
+            </div>
+            <div class="cart-panel-footer">
+                <div class="cart-total-row">
+                    <span>Total:</span>
+                    <strong id="cart-total">$0</strong>
+                </div>
+                <button id="cart-wa-btn" class="btn btn-wa">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
+                </button>
+            </div>
+        </div>
+        <div id="cart-overlay" class="cart-overlay"></div>
+
+        <!-- Start Main Content -->
         <div class="main-content">
-            <!--- Start Home section -->
+            <!-- Start Home section -->
             <section class="section active home" id="home">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
-                            <h3 class="hello">Hola, somos Gruop Arch <span class="name">grouparch.com.ar</span> </h3>
+                            <h3 class="hello">Hola, somos <span class="name">Group Arch</span></h3>
                             <h3 class="my-profession">Somos <span class="typing">Group Arch.</span></h3>
                             <p>Nos enfocamos fuertemente en el rubro de tecnología, con productos que abarcan
                                 televisores, celulares, tabletas, notebooks, cámaras digitales y pequeños
-                                electrodomésticos
-                                como batidoras, afeitadoras, planchas de pelo. Ofrecemos a nuestros clientes la
-                                posibilidad
-                                de pagar sus compras con variedad de medios de pago.</p>
-                            <a href="#" class="btn">Instagram</a>
+                                electrodomésticos como batidoras, afeitadoras, planchas de pelo. Ofrecemos a nuestros
+                                clientes la posibilidad de pagar sus compras con variedad de medios de pago.</p>
+                            <a href="https://www.instagram.com/grouparch" target="_blank" rel="noopener noreferrer"
+                                class="btn">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram
+                            </a>
                         </div>
                         <div class="home-img padd-15">
-                            <img src="./assets/img/profile.png" alt="me">
+                            <img src="./assets/img/profile.png" alt="Group Arch logo" loading="lazy">
                         </div>
                     </div>
                 </div>
             </section>
-            <!--- End Home section -->
-            <!--- Start About section -->
+            <!-- End Home section -->
+
+            <!-- Start About section -->
             <section class="section about" id="about">
                 <div class="container">
                     <div class="row">
-                        <!--- Start About Info -->
+                        <!-- Start About Info -->
                         <div class="about-info padd-15">
                             <div class="title-section">
                                 <h2>Nosotros</h2>
@@ -80,27 +116,24 @@
                                 <div class="about-content padd-15">
                                     <div class="row">
                                         <div class="about-text padd-15">
-                                            <h3>CONÓCENOS <span>Group Arch</span> </h3>
-                                            <p> NUESTROS OBJETIVOS</p>
-                                            <p> Tomamos este emprendimiento con esperanza de crecimiento pero enfocados
+                                            <h3>CONÓCENOS <span>Group Arch</span></h3>
+                                            <p><strong>NUESTROS OBJETIVOS</strong></p>
+                                            <p>Tomamos este emprendimiento con esperanza de crecimiento pero enfocados
                                                 en ofrecer un servicio de ventas en diferentes rubros que puedan
-                                                sastifacer las necesidades de quienes nos lo soliciten, abarcando
+                                                satisfacer las necesidades de quienes nos lo soliciten, abarcando
                                                 electrodomésticos, rodados y hasta artículos de ferretería.</p>
-
-                                            <p> Asimismo, este emprendedurismo es un escenario con gran potencial para
+                                            <p>Asimismo, este emprendedurismo es un escenario con gran potencial para
                                                 el desarrollo profesional y personal que buscamos, al surgir nuevos
                                                 negocios enfocados en satisfacer necesidades específicas de un público
-                                                determinado, en donde pueden aprovechar nuestras ofertas para
-                                                identificar oportunidades.</p>
+                                                determinado, donde pueden aprovechar nuestras ofertas para identificar
+                                                oportunidades.</p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="personal-info padd-15">
                                             <div class="row">
                                                 <div class="buttons padd-15">
-                                                    <a href="#contact" data-section-index="1" class="btn hire-me">
-                                                        CONTACTO
-                                                    </a>
+                                                    <a href="#contact" class="btn hire-me">CONTACTO</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -108,76 +141,67 @@
                                 </div>
                             </div>
                         </div>
-                        <!--- End About Info -->
+                        <!-- End About Info -->
                     </div>
                 </div>
-                <!--- End About section -->
             </section>
-            <!--- Start Service section -->
+            <!-- End About section -->
+
+            <!-- Start Service section -->
             <section class="section service" id="service">
                 <div class="container">
                     <div class="row">
                         <div class="section-cards padd-15">
-                            <!-- Start Section Cards -->
                             <div class="title-section">
                                 <h2>Servicios</h2>
                             </div>
                             <div class="row">
-                                <!-- Start Service Item -->
                                 <div class="service-item padd-15">
                                     <div class="service-item-inner">
                                         <div class="icon">
-                                            <i class="fa fa-mobile-alt"></i>
+                                            <i class="fa fa-mobile-alt" aria-hidden="true"></i>
                                         </div>
                                         <h4>Contacto personalizado</h4>
-                                        <p>Siempre atederemos todas tus consultas con calidez y cortecía.</p>
+                                        <p>Siempre atenderemos todas tus consultas con calidez y cortesía.</p>
                                     </div>
                                 </div>
-                                <!-- End Service Item -->
-                                <!-- Start Service Item -->
                                 <div class="service-item padd-15">
                                     <div class="service-item-inner">
                                         <div class="icon">
-                                            <i class="fa fa-laptop-code"></i>
+                                            <i class="fa fa-laptop-code" aria-hidden="true"></i>
                                         </div>
                                         <h4>Ventas Online</h4>
                                         <p>Todas las ventas son de manera online.</p>
                                     </div>
                                 </div>
-                                <!-- End Service Item -->
-                                <!-- Start Service Item -->
                                 <div class="service-item padd-15">
                                     <div class="service-item-inner">
                                         <div class="icon">
-                                            <i class="fa fa-palette"></i>
+                                            <i class="fa fa-tags" aria-hidden="true"></i>
                                         </div>
                                         <h4>Variedad de Productos</h4>
                                         <p>Contamos con diversa variedad de artículos.</p>
                                     </div>
                                 </div>
-                                <!-- End Service Item -->
                             </div>
-
                             <div class="row">
-                                <!-- Start Service Item -->
                                 <div class="service-item padd-15">
                                     <div class="service-item-inner">
                                         <div class="icon">
-                                            <i class="fa fa-code"></i>
+                                            <i class="fa fa-shield-alt" aria-hidden="true"></i>
                                         </div>
-                                        <h4>Todos tus compras están protegidas</h4>
-                                        <p>Tus compras están protegidas, en caso de disconformidad o lo que sea podes
-                                            devolver.</p>
+                                        <h4>Compras protegidas</h4>
+                                        <p>En caso de disconformidad podés devolver el producto sin problema.</p>
                                     </div>
                                 </div>
-                                <!-- End Service Item -->
                             </div>
-                        </div><!-- End Section Cards -->
+                        </div>
                     </div>
                 </div>
             </section>
-            <!--- End Service section -->
-            <!--- Start Portfolio section -->
+            <!-- End Service section -->
+
+            <!-- Start Portfolio section -->
             <section class="section portfolio" id="portfolio">
                 <div class="container">
                     <div class="row">
@@ -186,41 +210,40 @@
                         </div>
                         <div class="row">
                             <div class="portfolio-heading padd-15">
-                                <h2>Listado :</h2>
+                                <h2>Listado de productos</h2>
                             </div>
                         </div>
                         <div class="row">
-                            <!-- Start Portfolio Item -->
-                            <div class="container">
-                                <div class="row" id="cards"></div>
-                            </div>
-                            <!-- End Portfolio Item -->
+                            <div class="products-grid" id="cards"></div>
                         </div>
                     </div>
                 </div>
             </section>
+
             <!-- Template Cards -->
             <template id="template-card">
-                <div class="col-12 mb-2 col-md-4">
+                <div class="product-card-wrapper">
                     <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="" alt="Foto articulo" />
-                        <!-- Product details-->
+                        <img class="card-img-top" src="" alt="Foto artículo" loading="lazy">
                         <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Titulo</h5>
-                                <!-- Product price-->
-                                <p>Precio</p>
-                                <!-- Product actions-->
-                                <button class="btn btn-dark mt-auto" id="btnComprar">COMPRAR</button>
+                            <h5 class="fw-bolder product-title">Título</h5>
+                            <p class="product-description"></p>
+                            <p class="product-price">Precio</p>
+                            <div class="card-actions">
+                                <button class="btn btn-buy">
+                                    <i class="fa fa-whatsapp" aria-hidden="true"></i> Comprar
+                                </button>
+                                <button class="btn btn-cart-add btn-cart">
+                                    <i class="fa fa-cart-plus" aria-hidden="true"></i> Agregar
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </template>
-            <!--- End Portfolio section -->
-            <!--- Start Contac section -->
+            <!-- End Portfolio section -->
+
+            <!-- Start Contact section -->
             <section class="section contact" id="contact">
                 <div class="container">
                     <div class="row">
@@ -231,11 +254,10 @@
                     <h3 class="contact-title padd-15">Si querés contactarnos</h3>
                     <h4 class="contact-sub-title padd-15">Estamos aquí</h4>
                     <div class="row">
-                        <!-- Stasrt Contact info item -->
                         <div class="contact-info-item padd-15">
                             <div class="contact-info-item-inner">
                                 <div class="contact-info-icon">
-                                    <i class="fa fa-phone"></i>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
                                 </div>
                                 <div class="contact-info-text">
                                     <h4>Llamadas al</h4>
@@ -243,25 +265,21 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- End Contact info item -->
-                        <!-- Stasrt Contact info item -->
                         <div class="contact-info-item padd-15">
                             <div class="contact-info-item-inner">
                                 <div class="contact-info-icon">
-                                    <i class="fa fa-map-marker-alt"></i>
+                                    <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
                                 </div>
                                 <div class="contact-info-text">
                                     <h4>Oficinas</h4>
-                                    <p>CABA</p>
+                                    <p>CABA, Buenos Aires</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- End Contact info item -->
-                        <!-- Stasrt Contact info item -->
                         <div class="contact-info-item padd-15">
                             <div class="contact-info-item-inner">
                                 <div class="contact-info-icon">
-                                    <i class="fa fa-envelope"></i>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div class="contact-info-text">
                                     <h4>Email</h4>
@@ -269,12 +287,10 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- End Contact info item -->
-                        <!-- Stasrt Contact info item -->
                         <div class="contact-info-item padd-15">
                             <div class="contact-info-item-inner">
                                 <div class="contact-info-icon">
-                                    <i class="fa fa-globe-europe"></i>
+                                    <i class="fa fa-globe" aria-hidden="true"></i>
                                 </div>
                                 <div class="contact-info-text">
                                     <h4>Website</h4>
@@ -282,96 +298,123 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- End Contact info item -->
                     </div>
-                    <h3 class="contact-title padd-15">Envianos un email</h3>
-                    <h4 class="contact-sub-title padd-15">Te reponderemos a la brevedad</h4>
+                    <h3 class="contact-title padd-15">Envianos un mensaje</h3>
+                    <h4 class="contact-sub-title padd-15">Te responderemos a la brevedad</h4>
                     <!-- Start Contact Form -->
                     <div class="row">
                         <div class="contact-form padd-15">
-                            <div class="row">
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
+                            <form id="contact-form" novalidate>
+                                <div class="row">
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" id="contact-name" name="name" class="form-control"
+                                                placeholder="Nombre" autocomplete="name" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="email" id="contact-email" name="email" class="form-control"
+                                                placeholder="Email" autocomplete="email" required>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" id="contact-subject" name="subject" class="form-control"
+                                                placeholder="Asunto" required>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject">
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <textarea id="contact-message" name="message" class="form-control"
+                                                placeholder="Mensaje" required></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <button type="submit" class="btn">Enviar mensaje</button>
+                                        <span class="form-feedback" id="form-feedback"></span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <button type="submit" class="btn btn-primary">Send Message</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
+                    <!-- End Contact Form -->
                 </div>
-                <!-- End Contact Form -->
             </section>
+            <!-- End Contact section -->
         </div>
-        <!--- End Contac section -->
-        <!--- End Main Content -->
+        <!-- End Main Content -->
     </div>
     <!-- Main Container End -->
-    <!--WhatsApp Start -->
-    <div>
-        <!-- Los estilos para el Widget de WhatsApp esten en "_components.scss"-->
-        <div id="whatsAppWidget">
-            <a href="https://walink.co/4ee048" target="_blank">
-                <div class="whatsapp-widget">
-                    <svg viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <path
-                            d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
-                            fill-rule="evenodd"></path>
-                    </svg>
-                </div>
-            </a>
-        </div>
+
+    <!-- WhatsApp Widget Start -->
+    <div id="whatsAppWidget">
+        <a href="https://walink.co/4ee048" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+            <div class="whatsapp-widget">
+                <svg viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+                    <path
+                        d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
+                        fill-rule="evenodd"></path>
+                </svg>
+            </div>
+        </a>
     </div>
-    <!--WhatsApp End -->
+    <!-- WhatsApp Widget End -->
+
     <!-- Style Switcher Start-->
-    <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
-            <i class="fa fa-cog fa-spin"></i>
+    <div class="style-switcher" role="complementary" aria-label="Selector de tema">
+        <div class="style-switcher-toggler s-icon" role="button" aria-label="Abrir selector de tema">
+            <i class="fa fa-cog fa-spin" aria-hidden="true"></i>
         </div>
-        <div class="light-mode s-icon">
-            <i class="fa "></i>
+        <div class="light-mode s-icon" role="button" aria-label="Alternar modo oscuro">
+            <i class="fa" aria-hidden="true"></i>
         </div>
         <h4>Themes Colors</h4>
         <div class="colors">
-            <span class="color" onclick="setActiveStyle('theme')"></span>
-            <span class="color1" onclick="setActiveStyle('theme1')"></span>
-            <span class="color2" onclick="setActiveStyle('theme2')"></span>
-            <span class="color3" onclick="setActiveStyle('theme3')"></span>
-            <span class="color4" onclick="setActiveStyle('theme4')"></span>
+            <span class="color" onclick="setActiveStyle('theme')" title="Verde" role="button" aria-label="Tema verde"></span>
+            <span class="color1" onclick="setActiveStyle('theme1')" title="Rojo" role="button" aria-label="Tema rojo"></span>
+            <span class="color2" onclick="setActiveStyle('theme2')" title="Azul" role="button" aria-label="Tema azul"></span>
+            <span class="color3" onclick="setActiveStyle('theme3')" title="Amarillo" role="button" aria-label="Tema amarillo"></span>
+            <span class="color4" onclick="setActiveStyle('theme4')" title="Cyan" role="button" aria-label="Tema cyan"></span>
         </div>
     </div>
     <!-- Style Switcher End-->
+
     <!-- Scripts Start -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
         referrerpolicy="no-referrer"></script>
-    <!-- sweetalert2 -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/app.js"></script>
     <script src="./js/scripts.js"></script>
     <script src="./js/style-switcher.js"></script>
+    <script>
+        // Contact form → WhatsApp
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const subject = document.getElementById('contact-subject').value.trim();
+            const message = document.getElementById('contact-message').value.trim();
+            if (!name || !email || !subject || !message) {
+                document.getElementById('form-feedback').textContent = 'Por favor completá todos los campos.';
+                document.getElementById('form-feedback').className = 'form-feedback error';
+                return;
+            }
+            const waMsg = encodeURIComponent(
+                `Hola! Me comunico desde el sitio web.\nNombre: ${name}\nEmail: ${email}\nAsunto: ${subject}\nMensaje: ${message}`
+            );
+            window.open(`https://wa.me/5491122524460?text=${waMsg}`, '_blank', 'noopener,noreferrer');
+            document.getElementById('form-feedback').textContent = '¡Mensaje listo! Se abrió WhatsApp.';
+            document.getElementById('form-feedback').className = 'form-feedback success';
+            this.reset();
+        });
+    </script>
     <!-- Scripts End -->
 </body>
 
