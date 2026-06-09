@@ -64,6 +64,10 @@ cards.addEventListener("click", (e) => {
 });
 
 const showBuyModal = (data) => {
+  if (typeof Swal === "undefined") {
+    window.open("https://walink.co/4ee048", "_blank", "noopener,noreferrer");
+    return;
+  }
   Swal.fire({
     title: "ANTES DE COMPRAR",
     html: `

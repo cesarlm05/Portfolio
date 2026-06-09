@@ -1,9 +1,11 @@
-var typed = new Typed(".typing", {
-  strings: ["", "Group Arch.", "Web www.grouparch.com.ar"],
-  typeSpeed: 80,
-  backSpeed: 80,
-  loop: true,
-});
+if (typeof Typed !== "undefined") {
+  var typed = new Typed(".typing", {
+    strings: ["", "Group Arch.", "Web www.grouparch.com.ar"],
+    typeSpeed: 80,
+    backSpeed: 80,
+    loop: true,
+  });
+}
 
 const nav = document.querySelector(".nav"),
   navList = nav.querySelectorAll("li"),
